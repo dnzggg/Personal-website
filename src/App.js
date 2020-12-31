@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import {Route, Router} from "react-router-dom";
+import React from "react";
+import Home from "./Components/Home";
+import history from "./utils/history."
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Welcome to my website.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router history={history}>
+        <div className="Index">
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/Home">
+            <Home/>
+          </Route>
+        </div>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;
