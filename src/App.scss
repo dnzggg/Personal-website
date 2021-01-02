@@ -171,11 +171,10 @@ li {
 }
 
 
-.navbar {
+.nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20% 0 20%;
   position: absolute;
   z-index: 1;
 }
@@ -188,7 +187,6 @@ li {
   left: 0;
   box-shadow: 1px 1px 1px #222;
   width: 100vw;
-  animation: moveDown 0.5s ease-in-out;
 
   .logo {
     font-family: $inter;
