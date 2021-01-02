@@ -10,17 +10,17 @@ sans-serif;
 // ? GLOBAL
 html,
 body {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   background-color: #333;
 }
 
 main {
-  padding: 0px;
+  padding: 0;
 }
 
 .content {
-  padding: 0% 20% 0% 20%;
+  padding: 0 20% 0 20%;
 }
 
 
@@ -32,8 +32,8 @@ p {
   color: #FFFFFF;
   letter-spacing: 0;
   line-height: 32px;
-  padding: 0px;
-  margin: 24px 0px 0px 0px;
+  padding: 0;
+  margin: 24px 0 0 0;
 
 }
 
@@ -45,7 +45,7 @@ h1 {
 }
 
 h2 {
-  margin: 0px;
+  margin: 0;
   font-family: $monts;
   font-size: 24px;
   color: #AEAEAE;
@@ -60,7 +60,7 @@ h3 {
   color: #FFFFFF;
   letter-spacing: 0;
   font-weight: 300;
-  margin: 0px
+  margin: 0;
 }
 
 
@@ -78,7 +78,7 @@ h3 {
 
   p {
     font-size: 24px;
-    padding: 56px 0px 0px 0px;
+    padding: 56px 0 0 0;
   }
 }
 
@@ -109,7 +109,7 @@ h3 {
 
   hr {
     width: 15%;
-    margin: 0px;
+    margin: 0;
     border: 1px solid #AEAEAE
   }
 }
@@ -130,12 +130,12 @@ h3 {
 
 
 ul {
-  margin: 0px;
+  margin: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  padding: 0px;
+  padding: 0;
 }
 
 .hover {
@@ -149,7 +149,7 @@ li {
   background-image: linear-gradient(46deg, #4E54C8 0%, #8F94FB 100%);
   border-radius: 6px;
   padding: 16px;
-  margin: 24px 24px 0px 0px;
+  margin: 24px 24px 0 0;
   color: white;
   font-family: $inter;
   font-size: 18px;
@@ -170,36 +170,16 @@ li {
   margin: 2%
 }
 
-.grid-container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr minmax(200px, 1fr);
-  gap: 10px 10px;
-  justify-items: stretch;
-  grid-template-areas:
-    "A B C D"
-    "E F . .";
-}
-.A { grid-area: A; }
-.B { grid-area: B; }
-.C { grid-area: C; }
-.D { grid-area: D; }
-.E { grid-area: E; }
-.F { grid-area: F; }
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0% 20% 0% 20%;
+  padding: 0 20% 0 20%;
   position: absolute;
   z-index: 1;
 }
 
-.invisible {
-
-}
 
 .navbar-sticky {
   background-image: linear-gradient(135deg, #4E54C8 0%, #8F94FB 100%);
@@ -208,9 +188,7 @@ li {
   left: 0;
   box-shadow: 1px 1px 1px #222;
   width: 100vw;
-  //height: 10%;
   animation: moveDown 0.5s ease-in-out;
-
 
   .logo {
     font-family: $inter;
@@ -218,7 +196,7 @@ li {
     font-size: 64px;
     background: none;
     border: none;
-    padding: 1vh 1vw 0px 1vw;
+    padding: 1vh 1vw 0 1vw;
   }
 
   .section {
@@ -228,6 +206,32 @@ li {
     background: none;
     -ms-underline-position: auto;
     border: none;
-    padding: 1vh 1vw 0px 1vw;
+    padding: 1vh 1vw 0 1vw;
+  }
+}
+
+.navbar-hide {
+  animation: move 0.5s linear both;
+}
+
+.navbar-show {
+  animation: moveReverse 0.5s linear both;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0) rotateX(0deg);
+  }
+  100% {
+    transform: translateY(-150px) rotateX(-90deg);
+  }
+}
+
+@keyframes moveReverse {
+  0% {
+    transform: translateY(-150px) rotateX(-90deg);
+  }
+  100% {
+    transform: translateY(0) rotateX(0deg);
   }
 }

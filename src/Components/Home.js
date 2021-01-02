@@ -33,7 +33,7 @@ const Home = () => {
             <h3>Programming</h3>
             <p>This is an overview of my current skillset that I am constantly blah blah and this is some filler text to make it look likw aomwrhinf ahouls go hwew and sometjing else.</p>
           </div>
-          <div className="template-1"></div>
+          <div className="template-1" />
         </div>
 
         <h3>Software and Tools</h3>
@@ -65,26 +65,17 @@ const Home = () => {
             <h3>Programming</h3>
             <p>This is an overview of my current skillset that I am constantly blah blah and this is some filler text to make it look likw aomwrhinf ahouls go hwew and sometjing else.</p>
           </div>
-          <div className="template-1"></div>
+          <div className="template-1" />
         </div>
 
         <h3>Software and Tools</h3>
-        {/* <div className="portfolio-container">
+        <div className="portfolio-container">
           <button className="portfolio-item">Example</button>
           <button className="portfolio-item">Example</button>
           <button className="portfolio-item">Example</button>
           <button className="portfolio-item">Example</button>
           <button className="portfolio-item">Example</button>
           <button className="portfolio-item">Example</button>
-        </div> */}
-
-        <div class="grid-container">
-          <button class="A">Testing</button>
-          <button class="B">Testing</button>
-          <button class="C">Testing</button>
-          <button class="D">Testing</button>
-          <button class="E">Testing</button>
-          <button class="F">Testing</button>
         </div>
 
 
