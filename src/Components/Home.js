@@ -1,7 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
+
 
 
 const Home = () => {
+  const [hover, setHover] = useState("");
+
   return <main>
 
     <section className="hero">
@@ -35,7 +38,7 @@ const Home = () => {
 
         <h3>Software and Tools</h3>
         <ul>
-          <li className="tools">Visualisation of Data</li>
+          <li className={hover} onMouseOver={() => setHover("hover")} onMouseLeave={() => setHover("")}>Visualisation of Data</li>
           <li className="tools">Data Handling and Analysis</li>
           <li className="tools">GUI</li>
           <li className="tools">API</li>
@@ -52,8 +55,6 @@ const Home = () => {
       </section>
 
     </section>
-
-
 
   </main>
 };
