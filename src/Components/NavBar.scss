@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@600&display=swap');
+
+// ? VAR
+$inter: 'Inter',
+sans-serif;
+$monts: 'Montserrat',
+sans-serif;
+
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 1;
+}
+
+.navbar-sticky {
+  background-image: linear-gradient(135deg, #4E54C8 0%, #8F94FB 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 1px 1px 1px #222;
+  width: 100vw;
+
+  .logo {
+    font-family: $inter;
+    font-weight: 300;
+    font-size: 64px;
+    color: #FFFFFF;
+    background: none;
+    border: none;
+    padding: 1vh 1vw 0 1vw;
+  }
+
+  .section {
+    font-family: $inter;
+    font-weight: 300;
+    font-size: 40px;
+    color: #FFFFFF;
+    background: none;
+    text-underline-color: black;
+    border: none;
+    padding: 1vh 1vw 0 1vw;
+  }
+}
+
+.navbar-hide {
+  animation: move 0.5s linear both;
+}
+
+.navbar-show {
+  animation: moveReverse 0.5s linear both;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0) rotateX(0deg);
+  }
+  100% {
+    transform: translateY(-150px) rotateX(-90deg);
+  }
+}
+
+@keyframes moveReverse {
+  0% {
+    transform: translateY(-150px) rotateX(-90deg);
+  }
+  100% {
+    transform: translateY(0) rotateX(0deg);
+  }
+}

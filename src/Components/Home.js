@@ -1,9 +1,7 @@
-import React, {useState} from "react";
-
-
+import React from "react";
+import Tag from "./Tag";
 
 const Home = () => {
-  const [hover, setHover] = useState("");
 
   return <main>
 
@@ -38,18 +36,17 @@ const Home = () => {
 
         <h3>Software and Tools</h3>
         <ul>
-          <li className={hover} onMouseOver={() => setHover("hover")} onMouseLeave={() => setHover("")}>Visualisation of Data</li>
-          <li className="tools">Data Handling and Analysis</li>
-          <li className="tools">GUI</li>
-          <li className="tools">API</li>
-          <li className="tools">React</li>
-          <li className="tools">PyCharm</li>
-          <li className="tools">Eclipse</li>
-          <li className="tools">WebStorm</li>
-          <li className="tools">Visual Studio Code</li>
-          <li className="tools">Office</li>
-          <li className="tools">Version Control Systems</li>
-
+          <Tag text={"Visualisation of Data"}/>
+          <Tag text={"Data Handling and Analysis"}/>
+          <Tag text={"GUI"}/>
+          <Tag text={"API"}/>
+          <Tag text={"React"}/>
+          <Tag text={"PyCharm"}/>
+          <Tag text={"Eclipse"}/>
+          <Tag text={"WebStorm"}/>
+          <Tag text={"Visual Studio Code"}/>
+          <Tag text={"Office"}/>
+          <Tag text={"Version Control Systems"}/>
         </ul>
 
       </section>
@@ -58,17 +55,8 @@ const Home = () => {
           <hr />
         </div>
 
-        <h2>PORTFOLIO</h2>
+        <h2>PROJECTS</h2>
 
-        <div className="project-content">
-          <div>
-            <h3>Programming</h3>
-            <p>This is an overview of my current skillset that I am constantly blah blah and this is some filler text to make it look likw aomwrhinf ahouls go hwew and sometjing else.</p>
-          </div>
-          <div className="template-1" />
-        </div>
-
-        <h3>Software and Tools</h3>
         <div className="portfolio-container">
           <button className="portfolio-item">Example</button>
           <button className="portfolio-item">Example</button>
@@ -78,6 +66,41 @@ const Home = () => {
           <button className="portfolio-item">Example</button>
         </div>
 
+        <div className="project-content">
+          <div>
+            <h3>Project 1</h3>
+            <p>This is an overview of my current skillset that I am constantly blah blah and this is some filler text to make it look likw aomwrhinf ahouls go hwew and sometjing else.</p>
+          </div>
+          <iframe width="400" height="200" src="https://www.youtube.com/embed/PKW6osg67lM" frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen />
+        </div>
+
+        <div className="project-content2">
+          <div>
+            <h3>Project 2</h3>
+            <p>This is an overview of my current skillset that I am constantly blah blah and this is some filler text to make it look likw aomwrhinf ahouls go hwew and sometjing else.</p>
+          </div>
+          <iframe width="400" height="200" src="https://www.youtube.com/embed/71luXZf2bVs" frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen />
+        </div>
+
+        <div className="project-content">
+          <div>
+            <h3>Project 3</h3>
+            <p>This is an overview of my current skillset that I am constantly blah blah and this is some filler text to make it look likw aomwrhinf ahouls go hwew and sometjing else.</p>
+          </div>
+          <div className="template-1" />
+        </div>
+
+        <div className="project-content2">
+          <div>
+            <h3>Project 4</h3>
+            <p>This is an overview of my current skillset that I am constantly blah blah and this is some filler text to make it look likw aomwrhinf ahouls go hwew and sometjing else.</p>
+          </div>
+          <div className="template-1" />
+        </div>
 
       </section>
 

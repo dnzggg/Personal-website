@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 // import History from "../utils/history"
+import "./NavBar.scss"
 
 const NavBar = () => {
     const height = "1%";
