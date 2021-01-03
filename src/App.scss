@@ -10,17 +10,17 @@ sans-serif;
 // ? GLOBAL
 html,
 body {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   background-color: #333;
 }
 
 main {
-  padding: 0px;
+  padding: 0;
 }
 
 .content {
-  padding: 0% 20% 0% 20%;
+  padding: 0 20% 0 20%;
 }
 
 
@@ -31,9 +31,9 @@ p {
   font-size: 18px;
   color: #FFFFFF;
   letter-spacing: 0;
-  line-height: 40px;
-  padding: 0px;
-  margin: 24px 0px 0px 0px;
+  line-height: 32px;
+  padding: 0;
+  margin: 24px 0 0 0;
 
 }
 
@@ -45,7 +45,7 @@ h1 {
 }
 
 h2 {
-  margin: 0px;
+  margin: 0;
   font-family: $monts;
   font-size: 24px;
   color: #AEAEAE;
@@ -60,7 +60,7 @@ h3 {
   color: #FFFFFF;
   letter-spacing: 0;
   font-weight: 300;
-  margin: 0px
+  margin: 0;
 }
 
 
@@ -71,14 +71,14 @@ h3 {
   align-items: center;
 
   height: 100vh;
-  width: 100vw;
+  width: calc(100vw - (100vw - 100%));
 
   background-image: linear-gradient(135deg, #4E54C8 0%, #8F94FB 100%);
   color: white;
 
   p {
     font-size: 24px;
-    padding: 56px 0px 0px 0px;
+    padding: 56px 0 0 0;
   }
 }
 
@@ -109,7 +109,7 @@ h3 {
 
   hr {
     width: 15%;
-    margin: 0px;
+    margin: 0;
     border: 1px solid #AEAEAE
   }
 }
@@ -120,7 +120,7 @@ h3 {
   background-color: white;
 }
 
-.project-content {
+.project-content, .project-content2 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -128,56 +128,34 @@ h3 {
   padding-bottom: 80px;
 }
 
-
 ul {
-  margin: 0px;
+  margin: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  padding: 0px;
+  padding: 0;
 }
 
-li {
-  display: inline;
-  background-image: linear-gradient(46deg, #4E54C8 0%, #8F94FB 100%);
-  border-radius: 6px;
-  padding: 16px;
-  margin: 24px 24px 0px 0px;
-  color: white;
-  font-family: $inter;
-  font-size: 18px;
-  letter-spacing: 0;
-  font-weight: 300;
+.project-content2 {
+  background-color: #222222;
 }
 
 .portfolio-container {
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
-
+  justify-content: space-between;
+  align-content: flex-start;
 }
 
 .portfolio-item {
-  width: 200px;
-  height: 200px;
-  margin: 2%
+  flex-basis: auto;
+  width: 250px;
+  height: 250px;
+  margin: 2% 0 2% 0;
 }
 
-.grid-container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr minmax(200px, 1fr);
-  gap: 10px 10px;
-  justify-items: stretch;
-  grid-template-areas:
-    "A B C D"
-    "E F . .";
+.portfolio-container::after {
+  content: '';
+  width: 500px;
 }
-.A { grid-area: A; }
-.B { grid-area: B; }
-.C { grid-area: C; }
-.D { grid-area: D; }
-.E { grid-area: E; }
-.F { grid-area: F; }
