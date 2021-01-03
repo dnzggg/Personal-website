@@ -6,53 +6,29 @@ sans-serif;
 $monts: 'Montserrat',
 sans-serif;
 
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.dropdown-container {
   position: absolute;
-  z-index: 1;
-}
-
-.navbar-sticky {
+  align-items: center;
   background-image: linear-gradient(135deg, #4E54C8 0%, #8F94FB 100%);
-  position: fixed;
-  top: 0;
-  left: 0;
-  box-shadow: 1px 1px 1px #222;
-  width: 100vw;
 
-  .logo {
+
+  .dropdown-item {
     font-family: $inter;
     font-weight: 300;
-    font-size: 64px;
-    color: #FFFFFF;
+    font-size: 24px;
+    text-align: left;
+    color: black;
+    width: inherit;
     background: none;
-    border: none;
-    padding: 1vh 1vw 0 1vw;
-  }
-
-  .section {
-    font-family: $inter;
-    font-weight: 300;
-    font-size: 40px;
-    color: #FFFFFF;
-    background: none;
-    border: none;
-    padding: 1vh 1vw 0 1vw;
-  }
-
-  .dropdown {
-    display: inline-flex;
+    border: black;
   }
 }
 
-.navbar-hide {
+.dropdown-false {
   animation: move 0.5s linear both;
 }
 
-.navbar-show {
+.dropdown-true {
   animation: moveReverse 0.5s linear both;
 }
 
