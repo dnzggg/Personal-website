@@ -15,6 +15,7 @@ const MapButtons = (props) => {
 const Dropdown = (props) => {
     const [isOpen ,setIsOpen] = useState(false)
     const [pos, setPos] = useState([-1000, -1000, 0])
+    const [scrollTop, setScrollTop] = useState(window.scrollY);
 
     const handlePos = () => {
         const rect = document.getElementById("1").getBoundingClientRect()
@@ -24,12 +25,21 @@ const Dropdown = (props) => {
     }
 
     useEffect(()=> {
+        window.addEventListener("scroll", handleOnScroll);
         window.addEventListener("resize", () => handlePos())
-    }, [])
+    }, [scrollTop])
 
     const toggling = () => {
         setIsOpen(!isOpen)
         handlePos()
+    }
+
+    const handleOnScroll = () => {
+        if (scrollTop > window.scrollY) {
+            setIsOpen(false)
+        }
+        console.log(isOpen)
+        setScrollTop(window.scrollY)
     }
 
     return (
