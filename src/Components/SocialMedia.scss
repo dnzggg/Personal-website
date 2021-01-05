@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Montserrat:wght@600&display=swap');
+
+
+// ? VAR
+$inter: 'Inter',
+sans-serif;
+$monts: 'Montserrat',
+sans-serif;
+
+.container {
+  display: flex;
+  flex-flow: wrap row;
+  
+  button {
+    margin: 10px 0 10px 0;
+  }
+}
+
+.social-items {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  .icon {
+    align-items: center;
+    fill: black;
+  }
+}

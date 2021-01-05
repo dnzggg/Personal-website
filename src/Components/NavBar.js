@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from "react";
-// import History from "../utils/history"
+import history from "../utils/history"
 import "./NavBar.scss"
 import Dropdown from "./Dropdown";
+import scrollToRef from "../function/scrollToRef"
 
 const NavBar = () => {
     const height = "1%";
@@ -25,23 +26,36 @@ const NavBar = () => {
         } else if (scrollTop > window.scrollY) {
             setHide("show")
         }
-        if (window.scrollY < window.innerHeight - 400) {
+        const screenY = window.scrollY + window.innerHeight / 2
+        const skillsY = document.getElementById("skills").getBoundingClientRect().y + window.scrollY
+        const projectsY = document.getElementById("projects").getBoundingClientRect().y + window.scrollY
+        const contactY = document.getElementById("contact").getBoundingClientRect().y + window.scrollY
+        if (screenY > contactY) {
+            setSection("contact")
+        } else if (screenY > projectsY) {
+            setSection("projects")
+        } else if (screenY < skillsY) {
             setSection("about")
-        } else if (window.scrollY > window.innerHeight) {
+        } else if (screenY > skillsY) {
             setSection("skills")
         }
         setScrollTop(window.scrollY);
     };
 
-    let list = ["Project 1", "Project 2", "Project 3", "Project 4", "Project 5", "Project 6", "Project 7"];
+    let list = ["Cooperative Strategies in Multi-agent Systems", "Restaurant App", "Calculator",
+        "Tower Defence", "Self Pong Playing Robot", "Tic Tac Toe", "Minesweeper", "Snake"];
+
     return(
         <nav className={"nav navbar-sticky navbar-" + hide}>
             <div className="content" style={{height: height}}>
-                <button className="logo" onClick={() => console.log("link to page")}>Deniz</button>
-                <button className="section" style={section === "about"?{textDecorationLine: 'underline'}: {}} onClick={() => console.log("link to section")}>About</button>
-                <button className="section" style={section === "skills"?{textDecorationLine: 'underline'}: {}} onClick={() => console.log("link to section")}>Skills</button>
-                <Dropdown header={"Projects"} list={list} section={section} onClick={() => console.log("link to section")} />
-                <button className="section" style={section === "contact"?{textDecorationLine: 'underline'}: {}} onClick={() => console.log("link to section")}>Contact</button>
+                <button className="logo" onClick={() => history.push('/')}>Deniz</button>
+                <button className="section" style={section === "about"?{textDecorationLine: 'underline'}: {}}
+                        onClick={scrollToRef}>About</button>
+                <button className="section" style={section === "skills"?{textDecorationLine: 'underline'}: {}}
+                        onClick={scrollToRef}>Skills</button>
+                <Dropdown header={"Projects"} list={list} section={section} />
+                <button className="section" style={section === "contact"?{textDecorationLine: 'underline'}: {}}
+                        onClick={scrollToRef}>Contact</button>
             </div>
         </nav>
     )

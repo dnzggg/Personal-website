@@ -10,7 +10,7 @@ sans-serif;
   position: absolute;
   align-items: center;
   background-image: linear-gradient(135deg, #4E54C8 0%, #8F94FB 100%);
-
+  border: solid;
 
   .dropdown-item {
     font-family: $inter;
@@ -22,30 +22,36 @@ sans-serif;
     background: none;
     border: black;
   }
+
+  .dropdown-item:hover {
+    background-color: #ffffff;
+    opacity: 0.1;
+  }
 }
 
 .dropdown-false {
-  animation: move 0.5s linear both;
+  animation: moved 0.1s linear both;
 }
 
 .dropdown-true {
-  animation: moveReverse 0.5s linear both;
+  visibility: visible;
+  animation: moveReversed 0.1s linear both;
 }
 
-@keyframes move {
+@keyframes moved {
   0% {
-    transform: translateY(0) rotateX(0deg);
+    opacity: 1;
   }
   100% {
-    transform: translateY(-150px) rotateX(-90deg);
+    opacity: 0;
   }
 }
 
-@keyframes moveReverse {
+@keyframes moveReversed {
   0% {
-    transform: translateY(-150px) rotateX(-90deg);
+    opacity: 0;
   }
   100% {
-    transform: translateY(0) rotateX(0deg);
+    opacity: 1;
   }
 }
