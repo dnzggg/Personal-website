@@ -6,10 +6,7 @@ sans-serif;
 $monts: 'Montserrat',
 sans-serif;
 
-.hover {
-  animation: shadow-inset-center 0.3s linear both;
-  -webkit-animation: shadow-inset-center 0.3s linear both;;
-}
+
 
 @keyframes shadow-inset-center {  
   0% {
@@ -24,6 +21,20 @@ sans-serif;
   }
 }
 
+@keyframes shadow-reverse {
+  0% {
+    // transform: translateZ(0);
+    box-shadow: 0 0 35px 0 rgba(0,0,0,0.50);
+    background: rgba(83,88,204,0.80);
+  }
+  100% {
+    // transform: translateZ(50px);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    background: rgba(82,85,142,0.60);
+
+  }
+}
+
 li {
   display: inline;
   background: rgba(82,85,142,0.60);
@@ -35,4 +46,12 @@ li {
   font-size: 18px;
   letter-spacing: 0;
   font-weight: 300;
+  user-select: none;
+  animation: shadow-reverse 0.3s linear both;
+  -webkit-animation: shadow-reverse 0.3s linear both;
+}
+
+li:hover {
+  animation: shadow-inset-center 0.3s linear both;
+  -webkit-animation: shadow-inset-center 0.3s linear both;
 }

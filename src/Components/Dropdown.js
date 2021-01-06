@@ -5,7 +5,11 @@ import scrollToRef from "../function/scrollToRef";
 const MapButtons = (props) => {
     return props.list.map((item) => {
             return(
-                <button className="dropdown-item" onClick={scrollToRef}>{item}</button>
+                <div>
+                    <button className="dropdown-item" onClick={scrollToRef}>{item}</button>
+                    <hr />
+                </div>
+
             )
         }
     )
@@ -38,7 +42,6 @@ const Dropdown = (props) => {
         if (scrollTop > window.scrollY) {
             setIsOpen(false)
         }
-        console.log(isOpen)
         setScrollTop(window.scrollY)
     }
 

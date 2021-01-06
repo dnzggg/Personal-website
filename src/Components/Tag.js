@@ -1,12 +1,11 @@
-import React, {useState} from "react";
+import React from "react";
 import "./Tag.scss"
 
 
 const Tag = (props) => {
-    const [hover, setHover] = useState("")
 
     return(
-        <li className={hover} onMouseOver={() => setHover("hover")} onMouseLeave={() => setHover("")}>
+        <li>
             {props.text}
         </li>
     )

@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import Tag from "./Tag";
 import Icons from "./Icons";
 import {send, init} from "emailjs-com"
+import scrollToRef from "../function/scrollToRef";
 
 const Home = () => {
   const [formData, setFormData] = useState({
@@ -41,8 +42,8 @@ const Home = () => {
 
   return <main>
 
-    <section className="hero">
-      <div id={"about"} className="hero-content">
+    <section id={"about"} className="hero">
+      <div className="hero-content">
         <h1>&#60;Hello, my name is Deniz GORUR. <br /> I’m a Software Engineer./&gt;</h1>
         <p>BSc Computer Science student, determined, self-disciplined, self-starter, team player,
           <br /> eager to research further into studies, enthusiastic about Artificial Intelligence
@@ -94,15 +95,15 @@ const Home = () => {
 
         <h2>PROJECTS</h2>
 
-        <div className="portfolio-container-1">
-          <button className="portfolio-item">Cooperative Strategies in Multi-agent Systems</button>
-          <button className="portfolio-item">Restaurant App</button>
-          <button className="portfolio-item">Calculator</button>
-          <button className="portfolio-item">Tower Defence</button>
-          <button className="portfolio-item">Self Pong Playing Robot</button>
-          <button className="portfolio-item">Tic Tac Toe</button>
-          <button className="portfolio-item">Minesweeper</button>
-          <button className="portfolio-item">Snake</button>
+        <div className="portfolio-container">
+          <button onClick={scrollToRef} className="portfolio-item">Cooperative Strategies in Multi-agent Systems</button>
+          <button onClick={scrollToRef} className="portfolio-item">Restaurant App</button>
+          <button onClick={scrollToRef} className="portfolio-item">Calculator</button>
+          <button onClick={scrollToRef} className="portfolio-item">Tower Defence</button>
+          <button onClick={scrollToRef} className="portfolio-item">Self Pong Playing Robot</button>
+          <button onClick={scrollToRef} className="portfolio-item">Tic Tac Toe</button>
+          <button onClick={scrollToRef} className="portfolio-item">Minesweeper</button>
+          <button onClick={scrollToRef} className="portfolio-item">Snake</button>
         </div>
       </section>
     </section>
@@ -130,7 +131,7 @@ const Home = () => {
         <div>
           <h3>Restaurant App</h3>
           <p>This is an overview of my current skillset that I am constantly blah blah and this is some filler text to make it look likw aomwrhinf ahouls go hwew and sometjing else.</p>
-          <button className="project-button">See More</button>
+          <button onClick={() => window.open("https://oaxaca-ui-fn3mq.ondigitalocean.app")} className="project-button">See More</button>
         </div>
         <iframe
           title="My Daily Marathon Tracker"
@@ -146,7 +147,6 @@ const Home = () => {
           <div>
             <h3>Calculator</h3>
             <p>This is an overview of my current skillset that I am constantly blah blah and this is some filler text to make it look likw aomwrhinf ahouls go hwew and sometjing else.</p>
-            <button className="project-button">See More</button>
           </div>
           <div className="template-1" />
         </div>

@@ -3,8 +3,7 @@
 // ? VAR
 $inter: 'Inter',
 sans-serif;
-$monts: 'Montserrat',
-sans-serif;
+$white: #FFF;
 
 
 .nav {
@@ -27,7 +26,7 @@ sans-serif;
     font-family: $inter;
     font-weight: 300;
     font-size: 64px;
-    color: #FFFFFF;
+    color: $white;
     background: none;
     border: none;
     padding: 1vh 1vw 0 1vw;
@@ -37,7 +36,7 @@ sans-serif;
     font-family: $inter;
     font-weight: 300;
     font-size: 40px;
-    color: #FFFFFF;
+    color: $white;
     background: none;
     border: none;
     padding: 1vh 1vw 0 1vw;
@@ -45,6 +44,10 @@ sans-serif;
 
   .dropdown {
     display: inline-flex;
+  }
+
+  .logo:active, .section:active {
+    animation: click 0.3s linear both;
   }
 }
 
