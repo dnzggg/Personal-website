@@ -22,7 +22,7 @@ const Home = () => {
     setFormData(data)
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = () => {
     if (formData.message !== "" && formData.email !== "" && formData.name !== "") {
       init("user_iyDRnMi6ZAKdhgUST6vak")
       send("service_d2vj6oa","template_68gtuli", formData)
@@ -101,9 +101,9 @@ const Home = () => {
           <button onClick={scrollToRef} className="portfolio-item">Calculator</button>
           <button onClick={scrollToRef} className="portfolio-item">Tower Defence</button>
           <button onClick={scrollToRef} className="portfolio-item">Self Pong Playing Robot</button>
-          <button onClick={scrollToRef} className="portfolio-item">Tic Tac Toe</button>
-          <button onClick={scrollToRef} className="portfolio-item">Minesweeper</button>
           <button onClick={scrollToRef} className="portfolio-item">Snake</button>
+          <button onClick={scrollToRef} className="portfolio-item">Minesweeper</button>
+          <button onClick={scrollToRef} className="portfolio-item">Tic Tac Toe</button>
         </div>
       </section>
     </section>
@@ -114,7 +114,8 @@ const Home = () => {
         <div className="project-content-1">
           <div>
             <h3>Cooperative Strategies in Multi-agent Systems</h3>
-            <p>This is an overview of my current skillset that I am constantly blah blah and this is some filler text to make it look likw aomwrhinf ahouls go hwew and sometjing else.</p>
+            <p>This is my final year project. The purpose of the project is to evaluate results of how cooperation might have emerged in societies
+              using simulations of games in game theory (Prisoner’s Dilemma).</p>
           </div>
           <iframe
             title="My Daily Marathon Tracker"
@@ -130,7 +131,9 @@ const Home = () => {
       <div id={"restaurant app"} className="project-content-2">
         <div>
           <h3>Restaurant App</h3>
-          <p>This is an overview of my current skillset that I am constantly blah blah and this is some filler text to make it look likw aomwrhinf ahouls go hwew and sometjing else.</p>
+          <p>This was a group project that we had in second year and it got the <strong>Best Second Year Group Project</strong>.
+            Add more...
+          </p>
           <button onClick={() => window.open("https://oaxaca-ui-fn3mq.ondigitalocean.app")} className="project-button">See More</button>
         </div>
         <iframe
@@ -146,7 +149,8 @@ const Home = () => {
         <div className="project-content-1">
           <div>
             <h3>Calculator</h3>
-            <p>This is an overview of my current skillset that I am constantly blah blah and this is some filler text to make it look likw aomwrhinf ahouls go hwew and sometjing else.</p>
+            <p>This was the second year software engineering project. I implemented a calculator using software
+              engineering techniques like Version Control System, design patterns, unit tests, ...</p>
           </div>
           <div className="template-1" />
         </div>
@@ -155,7 +159,7 @@ const Home = () => {
       <div id={"tower defence"} className="project-content-2">
         <div>
           <h3>Tower Defence</h3>
-          <p>This is an overview of my current skillset that I am constantly blah blah and this is some filler text to make it look likw aomwrhinf ahouls go hwew and sometjing else.</p>
+          <p>This was the first year games module group project. We implemented the tower defence game in python.</p>
         </div>
         <div className="template-1" />
       </div>
@@ -164,25 +168,11 @@ const Home = () => {
         <div className="project-content-1">
           <div>
             <h3>Self Pong Playing Robot</h3>
-            <p>This is an overview of my current skillset that I am constantly blah blah and this is some filler text to make it look likw aomwrhinf ahouls go hwew and sometjing else.</p>
-          </div>
-          <div className="template-1" />
-        </div>
-      </div>
-
-      <div id={"tic tac toe"} className="project-content-2">
-        <div>
-          <h3>Tic Tac Toe</h3>
-          <p>This is an overview of my current skillset that I am constantly blah blah and this is some filler text to make it look likw aomwrhinf ahouls go hwew and sometjing else.</p>
-        </div>
-        <div className="template-1" />
-      </div>
-
-      <div id={"minesweeper"} className="project-padding-1">
-        <div className="project-content-1">
-          <div>
-            <h3>Minesweeper</h3>
-            <p>This is an overview of my current skillset that I am constantly blah blah and this is some filler text to make it look likw aomwrhinf ahouls go hwew and sometjing else.</p>
+            <p>This was the first year robotics module group project. We programmed a LEGO Mindstorms EV3 robot to
+              play pong with itself. We made a steep cardboard where the ball goes down and the robot tries to hit the ball when it comes down.
+              This was achieved using the camera of a phone and connected to the robot with bluetooth.
+            </p>
+            <button onClick={() => window.open("https://github.com/prechuthan/EV3-Pong")} className="project-button">See Code</button>
           </div>
           <div className="template-1" />
         </div>
@@ -191,9 +181,31 @@ const Home = () => {
       <div id={"snake"} className="project-content-2">
         <div>
           <h3>Snake</h3>
-          <p>This is an overview of my current skillset that I am constantly blah blah and this is some filler text to make it look likw aomwrhinf ahouls go hwew and sometjing else.</p>
+          <p>This was the snake game I implemented in ALevel. I implemented in a way where someone that wants to can
+            apply Artificial Intelligence to play the game.</p>
+          <button onClick={() => window.open("https://github.com/dnzggg/Snake")} className="project-button">See Code</button>
         </div>
         <div className="template-1" />
+      </div>
+
+      <div id={"minesweeper"} className="project-padding-1">
+        <div className="project-content-1">
+          <div>
+            <h3>Minesweeper</h3>
+            <p>This was the Minesweeper game I implemented in ALevel.</p>
+            <button onClick={() => window.open("https://github.com/dnzggg/Minesweeper")} className="project-button">See Code</button>
+          </div>
+          <div className="template-1" />
+        </div>
+      </div>
+
+      <div id={"tic tac toe"} className="project-content-2">
+          <div>
+            <h3>Tic Tac Toe</h3>
+            <p>This is one of the first project I made in ALevel and it was the Tic Tac Toe game.</p>
+            <button onClick={() => window.open("https://github.com/dnzggg/TicTacToe")} className="project-button">See Code</button>
+          </div>
+          <div className="template-1" />
       </div>
     </section>
 

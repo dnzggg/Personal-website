@@ -43,7 +43,7 @@ const NavBar = () => {
     };
 
     let list = ["Cooperative Strategies in Multi-agent Systems", "Restaurant App", "Calculator",
-        "Tower Defence", "Self Pong Playing Robot", "Tic Tac Toe", "Minesweeper", "Snake"];
+        "Tower Defence", "Self Pong Playing Robot", "Snake", "Minesweeper", "Tic Tac Toe"];
 
     return(
         <nav className={"nav navbar-sticky navbar-" + hide}>

@@ -41,11 +41,11 @@ sans-serif;
 }
 
 .dropdown-false {
+  display: none;
   animation: moved 0.1s linear both;
 }
 
 .dropdown-true {
-  visibility: visible;
   animation: moveReversed 0.1s linear both;
 }
 

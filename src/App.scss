@@ -79,9 +79,10 @@ h3 {
   width: calc(100vw - (100vw - 100%));
 
   color: $white;
-  background: linear-gradient(135deg, #fe5c01 0%, #ffb186 100%);
-  background-size: 200% 200%;
-  animation: change 5s linear infinite alternate both;
+  background-image: linear-gradient(135deg, #4E54C8 0%, #8F94FB 100%);
+  //background: linear-gradient(135deg, #fe5c01 0%, #ffb186 100%);
+  //background-size: 400% 400%;
+  //animation: change 5s linear infinite alternate both;
 
   p {
     font-size: 24px;
@@ -91,13 +92,13 @@ h3 {
 
 @keyframes change {
   0% {
-    background-position: 0% 50%;
+    background-position: 0 0;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 100%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0 0;
   }
 }
 
@@ -145,6 +146,7 @@ h3 {
 
   text {
     position: absolute;
+    pointer-events: none;
   }
 
   .false {
@@ -152,7 +154,7 @@ h3 {
   }
 
   .true {
-
+    color: $white;
   }
 }
 
@@ -215,7 +217,8 @@ ul {
   border-radius: 12px;
   background-image: linear-gradient(135deg, #4E54C8 0%, #8F94FB 100%);
   animation: shadow-r 0.3s linear both;
-
+  font-size: 20px;
+  color: $white;
 }
 
 .portfolio-item:hover {
@@ -370,7 +373,8 @@ input {
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px rgba(216, 216, 216, 0.4) inset;
+  -webkit-box-shadow: 0 0 0 1000px rgba(216, 216, 216, 0.13) inset;
+  background-color: rgba(216, 216, 216, 0.13);
   transition: background-color 5000s ease-in-out 0s;
 }
 

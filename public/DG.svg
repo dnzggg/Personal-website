@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="242" height="232" viewBox="0 0 242 232">
+  <defs>
+    <filter id="DG" x="0" y="0" width="242" height="232">
+      <feOffset dy="3"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Component_1_1" transform="translate(9 6)">
+    <g transform="matrix(1, 0, 0, 1, -9, -6)" filter="url(#DG)">
+      <text id="DG-2" transform="translate(9 180)" fill="#fff" font-size="161" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">DG</tspan></text>
+    </g>
+  </g>
+</svg>

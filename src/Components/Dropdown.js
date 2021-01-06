@@ -33,8 +33,12 @@ const Dropdown = (props) => {
         window.addEventListener("resize", () => handlePos())
     }, [scrollTop])
 
-    const toggling = () => {
-        setIsOpen(!isOpen)
+    const toggling = (e) => {
+        if (e.type === "mousemove") {
+            setIsOpen(true)
+        } else {
+            setIsOpen(false)
+        }
         handlePos()
     }
 
@@ -46,10 +50,10 @@ const Dropdown = (props) => {
     }
 
     return (
-        <div className="dropdown">
+        <div className="dropdown" onMouseMove={toggling}  onMouseLeave={toggling}>
 
-            <button className="section" id="1" style={props.section === "projects"?{textDecorationLine: 'underline'}: {}} onClick={toggling}>
-                {props.header}
+            <button className="section" id="1" style={props.section === "projects"?{textDecorationLine: 'underline'}: {}}>
+                {props.header}&#94;
             </button>
             <div className={"dropdown-container dropdown-" + isOpen} style={{left: pos[0].toString() + "px", top: pos[1].toString() + "px", width: pos[2].toString() + "px"}}>
                 <MapButtons list={props.list}/>
