@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import "./Dropdown.scss"
 import scrollToRef from "../function/scrollToRef";
+import {ReactComponent as Arrow} from "../images/arrow.svg";
 
 const MapButtons = (props) => {
     return props.list.map((item) => {
@@ -53,7 +54,7 @@ const Dropdown = (props) => {
         <div className="dropdown" onMouseMove={toggling}  onMouseLeave={toggling}>
 
             <button className="section" id="1" style={props.section === "projects"?{textDecorationLine: 'underline'}: {}}>
-                {props.header}&#94;
+                {props.header}<Arrow className={"text-" + isOpen}/>
             </button>
             <div className={"dropdown-container dropdown-" + isOpen} style={{left: pos[0].toString() + "px", top: pos[1].toString() + "px", width: pos[2].toString() + "px"}}>
                 <MapButtons list={props.list}/>

@@ -40,6 +40,14 @@ $white: #FFF;
     background: none;
     border: none;
     padding: 1vh 1vw 0 1vw;
+
+    svg {
+      margin-left: 3px;
+    }
+  }
+
+  .section:hover, .logo:hover {
+    opacity: 0.7;
   }
 
   .dropdown {
