@@ -40,13 +40,39 @@ sans-serif;
   }
 }
 
+.text-false {
+  animation: rotate-r 0.3s linear both;
+}
+
+.text-true {
+  animation: rotate 0.3s linear both;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(180deg);
+  }
+}
+
+@keyframes rotate-r {
+  0% {
+    transform: rotateX(180deg);
+  }
+  100% {
+    transform: rotateX(0);
+  }
+}
+
 .dropdown-false {
-  display: none;
-  animation: moved 0.1s linear both;
+  overflow: hidden;
+  animation: moved 0.3s linear both;
 }
 
 .dropdown-true {
-  animation: moveReversed 0.1s linear both;
+  animation: moveReversed 0.3s linear both;
 }
 
 @keyframes moved {
@@ -55,6 +81,7 @@ sans-serif;
   }
   100% {
     opacity: 0;
+    height: 0;
   }
 }
 

@@ -24,9 +24,10 @@ const Icons = () => {
         handleMouseMove(e)
     }
 
-    const handleMouseMove = (ev) => {
+    const handleMouseMove = (e) => {
+        const rect = e.target.getBoundingClientRect()
 
-        setMouse({x: ev.pageX, y: ev.pageY})
+        setMouse({x: rect.x + 20, y: rect.y + window.scrollY + 60})
     }
 
   return (
