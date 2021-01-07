@@ -44,12 +44,8 @@ const Home = () => {
 
     <section id={"about"} className="hero">
       <div className="hero-content">
-        <h1>&#60;Hello, my name is Deniz GORUR. <br /> I’m a future Software Engineer./&gt;</h1>
-        <p>BSc Computer Science student, determined, self-disciplined, self-starter, team player,
-          <br /> eager to research further into studies, enthusiastic about Artificial Intelligence
-          <br /> especially Intelligent Agents and Multi-agent Systems with
-          <br /> a future plan of Master’s and PhD degree and an
-          academic career on this topic
+        <h1>&#60;Hello, my name is Deniz GORUR.  I’m a future Software Engineer./&gt;</h1>
+        <p>BSc Computer Science student, determined, self-disciplined, self-starter, team player, eager to research further into studies, enthusiastic about Artificial Intelligence especially Intelligent Agents and Multi-agent Systems with a future plan of Master’s and PhD degree and an academic career on this topic
         </p>
       </div>
     </section>
@@ -152,7 +148,13 @@ const Home = () => {
             <p>This was the second year software engineering project. I implemented a calculator using software
               engineering techniques like Version Control System, design patterns, unit tests, ...</p>
           </div>
-          <div className="template-1" />
+          <iframe
+          title="My Daily Marathon Tracker"
+          width="400"
+          height="200"
+          src="https://www.youtube.com/embed/71luXZf2bVs" frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen />
         </div>
       </div>
 
@@ -161,7 +163,13 @@ const Home = () => {
           <h3>Tower Defence</h3>
           <p>This was the first year games module group project. We implemented the tower defence game in python.</p>
         </div>
-        <div className="template-1" />
+        <iframe
+          title="My Daily Marathon Tracker"
+          width="400"
+          height="200"
+          src="https://www.youtube.com/embed/71luXZf2bVs" frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen />
       </div>
 
       <div id={"self pong playing robot"} className="project-padding-1">
@@ -174,7 +182,13 @@ const Home = () => {
             </p>
             <button onClick={() => window.open("https://github.com/prechuthan/EV3-Pong")} className="project-button">See Code</button>
           </div>
-          <div className="template-1" />
+          <iframe
+          title="My Daily Marathon Tracker"
+          width="400"
+          height="200"
+          src="https://www.youtube.com/embed/71luXZf2bVs" frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen />
         </div>
       </div>
 
@@ -185,7 +199,13 @@ const Home = () => {
             apply Artificial Intelligence to play the game.</p>
           <button onClick={() => window.open("https://github.com/dnzggg/Snake")} className="project-button">See Code</button>
         </div>
-        <div className="template-1" />
+        <iframe
+          title="My Daily Marathon Tracker"
+          width="400"
+          height="200"
+          src="https://www.youtube.com/embed/71luXZf2bVs" frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen />
       </div>
 
       <div id={"minesweeper"} className="project-padding-1">
@@ -195,7 +215,13 @@ const Home = () => {
             <p>This was the Minesweeper game I implemented in ALevel.</p>
             <button onClick={() => window.open("https://github.com/dnzggg/Minesweeper")} className="project-button">See Code</button>
           </div>
-          <div className="template-1" />
+          <iframe
+          title="My Daily Marathon Tracker"
+          width="400"
+          height="200"
+          src="https://www.youtube.com/embed/71luXZf2bVs" frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen />
         </div>
       </div>
 
@@ -205,7 +231,13 @@ const Home = () => {
             <p>This is one of the first project I made in ALevel and it was the Tic Tac Toe game.</p>
             <button onClick={() => window.open("https://github.com/dnzggg/TicTacToe")} className="project-button">See Code</button>
           </div>
-          <div className="template-1" />
+          <iframe
+          title="My Daily Marathon Tracker"
+          width="400"
+          height="200"
+          src="https://www.youtube.com/embed/71luXZf2bVs" frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen />
       </div>
     </section>
 

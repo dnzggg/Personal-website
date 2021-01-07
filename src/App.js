@@ -11,7 +11,7 @@ const App = () => {
     return (
       <div>
           <Router history={history}>
-              <NavBar />
+              {/* <NavBar /> */}
               <Route exact path="/">
                   <Home />
               </Route>
