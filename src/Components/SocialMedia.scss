@@ -7,7 +7,7 @@ sans-serif;
 
 .container {
   display: flex;
-  flex-flow: wrap row;
+  justify-content: flex-start;
   
   button {
     margin: 10px 0 10px 0;
@@ -16,11 +16,20 @@ sans-serif;
 
 .social-items {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  margin-bottom: 24px;
 
   .icon {
     align-items: center;
     fill: black;
+    padding: 0px;
+    margin: 0 24px 0 0
   }
+}
+
+@media screen and (max-width: 1100px) { 
+
+.social-items {
+  margin-bottom: 0;
+}
+
 }
