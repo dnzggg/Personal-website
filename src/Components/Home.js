@@ -23,7 +23,8 @@ const Home = () => {
   }
 
   const handleSubmit = () => {
-    if (formData.message !== "" && formData.email !== "" && formData.name !== "") {
+    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (formData.message !== "" && formData.email !== "" && re.test(formData.email) && formData.name !== "") {
       init("user_iyDRnMi6ZAKdhgUST6vak")
       send("service_d2vj6oa","template_68gtuli", formData)
           .then(() => setFormData({
@@ -32,11 +33,6 @@ const Home = () => {
             message: ""
           })
           )
-      setFormData({
-        name: "",
-        email: "",
-        message: ""
-      })
     }
   }
 
@@ -251,7 +247,7 @@ const Home = () => {
 
         <form onSubmit={event => event.preventDefault()}>
           <input required name={"name"} onChange={handleChange} className="input" type="text" placeholder="Your Name" value={formData.name}/>
-          <input required autoComplete="email" name={"email"} onChange={handleChange} className="input" type="email" placeholder="Your Email" value={formData.email}/>
+          <input required autoComplete="email" name={"email"} onChange={handleChange} className="input" placeholder="Your Email" type={"email"} title="Email (format: xxx@xxx.xxx)" value={formData.email}/>
           <input required name={"message"} onChange={handleChange} className="input" type="text" placeholder="Your Message..." value={formData.message}/>
           <button onClick={handleSubmit}>Send Message</button>
         </form>

@@ -56,6 +56,7 @@ h2 {
   letter-spacing: 22px;
   line-height: 38px;
   padding-bottom: 40px;
+  user-select: none;
 }
 
 h3 {
@@ -65,6 +66,7 @@ h3 {
   letter-spacing: 0;
   font-weight: 300;
   margin: 0;
+  user-select: none;
 }
 
 
@@ -79,7 +81,10 @@ h3 {
   width: calc(100vw - (100vw - 100%));
 
   color: $white;
-  background-image: linear-gradient(135deg, #FF512F 0%, #F09819 100%);
+  //background-image: linear-gradient(135deg, #FF512F 0%, #F09819 100%);
+  background: linear-gradient(135deg, #FF512F 0%, #F09819 100%);
+  background-size: 200% 200%;
+  animation: change 10s linear infinite alternate both;
 
   p {
     font-size: 24px;
@@ -105,7 +110,8 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 0 80px 0 80px;
+  margin: 0 10vh 0 10vh;
+  user-select: none;
 }
 
 
@@ -230,6 +236,7 @@ ul {
   color: $white;
   box-shadow: 0 0 17px 0 rgba(0,0,0,0.20);
   padding: 20px;
+  user-select: none;
 }
 
 .portfolio-item:hover {
@@ -336,6 +343,7 @@ ul {
   font-weight: 300;
   margin-top: 32px;
   animation: shadow-r 0.3s linear both;
+  user-select: none;
 }
 
 .project-button:hover {
@@ -368,6 +376,7 @@ form {
     padding: 24px;
     border: none;
     animation: shadow-r 0.3s linear both;
+    user-select: none;
   }
 
   button:hover {
