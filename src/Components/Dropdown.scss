@@ -16,17 +16,19 @@ sans-serif;
   border-top-right-radius: 4px;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
+  padding: 20px;
 
   .dropdown-item {
     font-family: $inter;
-    font-weight: 300;
-    font-size: 24px;
+    font-weight: 200;
+    font-size: 20px;
     text-align: left;
     color: white;
     //noinspection CssInvalidPropertyValue
     width: -webkit-fill-available;
     background: none;
     border: none;
+    margin-bottom: 6px;
   }
 
   hr {
