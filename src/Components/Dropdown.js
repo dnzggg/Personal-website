@@ -10,7 +10,6 @@ const MapButtons = (props) => {
                     <button className="dropdown-item" onClick={scrollToRef}>{item}</button>
                     <hr />
                 </div>
-
             )
         }
     )

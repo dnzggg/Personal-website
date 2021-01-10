@@ -5,6 +5,7 @@ import Dropdown from "./Dropdown";
 import scrollToRef from "../function/scrollToRef"
 import { ReactComponent as Menu } from "../images/menu.svg"
 import { ReactComponent as Close } from "../images/close.svg"
+import MobileDropdown from "./MobileDropdown";
 
 const NavBar = () => {
   const height = "1%";
@@ -17,11 +18,12 @@ const NavBar = () => {
   useEffect(() => {
     // subscribe event
     window.addEventListener("scroll", handleOnScroll);
+    window.addEventListener("resize", () => {if (window.innerWidth > 1100) {setMobileHide("hide");document.body.classList.remove("mobile-menu-open")}})
     return () => {
       // unsubscribe event
       window.removeEventListener("scroll", handleOnScroll);
     };
-  }, [scrollTop]);
+  }, []);
 
   const handleOnScroll = () => {
     if (scrollTop < window.scrollY) {
@@ -56,6 +58,7 @@ const NavBar = () => {
   }
 
   const handleClick = (e) => {
+    console.log("a")
     handleOpen()
 
     scrollToRef(e)
@@ -83,7 +86,7 @@ const NavBar = () => {
 
 
       <nav className={"navbar-mobile"}>
-        <div className="nav-mobile-items" style={{ height: height }}>
+        <div className="nav-mobile-items">
           <div className="logo" />
           <button className={"logo"} onClick={handleOpen}>
             <Menu className={"svg"} />
@@ -91,16 +94,25 @@ const NavBar = () => {
         </div>
 
         <div className={"nav-menu-mobile nav-menu-mobile-" + mobileHide}>
-          <div className={"nav-mobile-items"}>
-            <div />
-            <button className={"exit"} onClick={handleOpen}>
-              <Close className={"svg"} />
-            </button>
+          <div className={"navbar-mobile"}>
+            <div className={"nav-mobile-items"}>
+              <div />
+              <div className="nav-mobile-items" style={{ height: height }}>
+                <div className="logo" />
+                <button className={"logo"} onClick={handleOpen}>
+                  <Close className={"svg"} />
+                </button>
+              </div>
+            </div>
           </div>
-          <button className="section" onClick={handleClick}>About</button>
-          <button className="section" onClick={handleClick}>Skills</button>
-          <Dropdown header={"Projects"} list={list} section={section} />
-          <button className="section" onClick={handleClick}>Contact</button>
+
+
+          <div className={"menu-wrapper"}>
+            <button className="section" onClick={handleClick}>About</button>
+            <button className="section" onClick={handleClick}>Skills</button>
+            <MobileDropdown header={"Projects"} list={list} handleClick={handleClick} />
+            <button className="section" onClick={handleClick}>Contact</button>
+          </div>
         </div>
       </nav>
     </div>
