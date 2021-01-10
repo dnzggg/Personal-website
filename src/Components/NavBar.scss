@@ -8,7 +8,7 @@ $white: #FFF;
 
 
 
-.navbar-sticky {
+.navbar-desktop {
   background-image: linear-gradient(46deg, #404040 0%, #525252 100%);
   position: fixed;
   top: 0;
@@ -54,21 +54,21 @@ $white: #FFF;
   }
 }
 
-.navbar-hide {
+.navbar-desktop-hide {
   animation: move 0.5s linear both;
 }
 
-.navbar-show {
+.navbar-desktop-show {
   animation: moveReverse 0.5s linear both;
 }
 
-.nav-items {
+.nav-desktop-items {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.nav-links {
+.nav-desktop-links {
   display: flex;
 }
 
@@ -92,7 +92,107 @@ $white: #FFF;
   }
 }
 
+// mobile
+
+.navbar-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: none;
+  z-index: 900;
+
+  .logo {
+    text-align: right;
+    font-family: $inter;
+    font-weight: 200;
+    font-size: 48px;
+    color: $white;
+    background: none;
+    border: none;
+    padding: 1vh 1vw 0 1vw;
+  }
+}
+
+.nav-menu-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(46deg, #404040 0%, #525252 100%);
+  transition: visibility .6s step-start;
+
+
+  .exit {
+    background: none;
+    border: none;
+    justify-items: right;
+    padding: 1vh 1vw 0 1vw;
+    width: fit-content;
+  }
+
+  .section {
+    font-family: $inter;
+    font-weight: 200;
+    font-size: 28px;
+    color: $white;
+    background: none;
+    border: none;
+    padding: 3vh 0 0 5vw;
+    text-align: left;
+    width: fit-content;
+  }
+}
+
+.nav-mobile-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-menu-mobile-show {
+  animation: swipeIn .6s cubic-bezier(.165,.84,.44,1) forwards;
+}
+
+@keyframes swipeIn {
+  0% {
+    clip-path: polygon(101% 0%,100% 0%,101% 100%,116% 100%);
+  }
+  100% {
+    clip-path: polygon(0% 0%,101% 0%,101% 101%,0% 101%);
+  }
+}
+
+.nav-menu-mobile-hide {
+  animation: swipeOut .6s cubic-bezier(.165,.84,.44,1) forwards;
+}
+
+@keyframes swipeOut {
+  0% {
+    clip-path: polygon(0% 0%,101% 0%,101% 101%,0% 101%);
+  }
+  100% {
+    clip-path: polygon(105% 0%,100% 0%,101% 100%,100% 100%);
+  }
+}
+
+.svg {
+  width: 30px;
+  height: 30px;
+  fill: white;
+  padding: 20px;
+}
+
 // ! BURGER NEEDS TO BE IMPLEMENTED
 @media screen and (max-width: 1100px) {
+  .navbar-desktop {
+    display: none;
+  }
 
+  .navbar-mobile {
+    display: block;
+  }
 }
