@@ -29,7 +29,7 @@ const Dropdown = (props) => {
     }
 
     useEffect(()=> {
-        window.addEventListener("scroll", handleOnScroll);
+        window.addEventListener("scroll", () => handleOnScroll());
         window.addEventListener("resize", () => handlePos())
     }, [scrollTop])
 

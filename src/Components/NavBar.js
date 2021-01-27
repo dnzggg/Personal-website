@@ -23,9 +23,10 @@ const NavBar = () => {
       // unsubscribe event
       window.removeEventListener("scroll", handleOnScroll);
     };
-  }, []);
+  }, [scrollTop]);
 
   const handleOnScroll = () => {
+    console.log(scrollTop, window.scrollY)
     if (scrollTop < window.scrollY) {
       setHide("hide")
     } else if (scrollTop > window.scrollY) {
@@ -69,7 +70,7 @@ const NavBar = () => {
 
   return (
     <div>
-      <nav className={"navbar-desktop navbar-" + hide}>
+      <nav className={"navbar-desktop navbar-desktop-" + hide}>
         <div className="content nav-desktop-items" style={{ height: height }}>
           <button className="logo" onClick={() => history.push('/')}>Deniz</button>
           <div className="nav-desktop-links">
@@ -110,7 +111,7 @@ const NavBar = () => {
           <div className={"menu-wrapper"}>
             <button className="section" onClick={handleClick}>About</button>
             <button className="section" onClick={handleClick}>Skills</button>
-            <MobileDropdown header={"Projects"} list={list} handleClick={handleClick} />
+            <MobileDropdown header={"Projects"} list={list} handleClick={handleClick} hide={mobileHide} />
             <button className="section" onClick={handleClick}>Contact</button>
           </div>
         </div>

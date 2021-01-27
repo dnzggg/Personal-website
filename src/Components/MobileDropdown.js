@@ -1,6 +1,5 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import "./Dropdown.scss"
-import scrollToRef from "../function/scrollToRef";
 import {ReactComponent as Arrow} from "../images/arrow.svg";
 
 const MapButtons = (props) => {
@@ -20,7 +19,7 @@ const MapButtons = (props) => {
 const MobileDropdown = (props) => {
     const [isOpen ,setIsOpen] = useState(false)
 
-    const toggling = (e) => {
+    const toggling = () => {
         setIsOpen(!isOpen)
     }
 
