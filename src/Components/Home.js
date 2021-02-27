@@ -248,7 +248,7 @@ const Home = () => {
         <form onSubmit={event => event.preventDefault()}>
           <input required name={"name"} onChange={handleChange} className="input" type="text" placeholder="Your Name" value={formData.name}/>
           <input required autoComplete="email" name={"email"} onChange={handleChange} className="input" placeholder="Your Email" type={"email"} title="Email (format: xxx@xxx.xxx)" value={formData.email}/>
-          <input required name={"message"} onChange={handleChange} className="input" type="text" placeholder="Your Message..." value={formData.message}/>
+          <textarea style={{resize: "None", height: "25vh"}} name={"message"} onChange={handleChange} className="input" placeholder="Your Message..." value={formData.message}/>
           <button onClick={handleSubmit}>Send Message</button>
         </form>
 

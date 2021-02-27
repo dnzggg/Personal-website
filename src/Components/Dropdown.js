@@ -52,7 +52,7 @@ const Dropdown = (props) => {
     return (
         <div className="dropdown" onMouseMove={toggling}  onMouseLeave={toggling}>
 
-            <button className="section" id="1" style={props.section === "projects"?{textDecorationLine: 'underline'}: {}}>
+            <button className="section" id="1" style={props.section === "projects"?{textDecorationLine: 'underline', textUnderlinePosition: "under"}: {}}>
                 {props.header}<Arrow className={"text-" + isOpen}/>
             </button>
             <div className={"dropdown-container dropdown-" + isOpen} style={{left: pos[0].toString() + "px", top: pos[1].toString() + "px", width: pos[2].toString() + "px"}}>

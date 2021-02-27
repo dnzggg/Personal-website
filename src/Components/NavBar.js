@@ -26,7 +26,6 @@ const NavBar = () => {
   }, [scrollTop]);
 
   const handleOnScroll = () => {
-    console.log(scrollTop, window.scrollY)
     if (scrollTop < window.scrollY) {
       setHide("hide")
     } else if (scrollTop > window.scrollY) {
@@ -74,12 +73,12 @@ const NavBar = () => {
         <div className="content nav-desktop-items" style={{ height: height }}>
           <button className="logo" onClick={() => history.push('/')}>Deniz</button>
           <div className="nav-desktop-links">
-            <button className="section" style={section === "about" ? { textDecorationLine: 'underline' } : {}}
+            <button className="section" style={section === "about" ? { textDecorationLine: 'underline', textUnderlinePosition: "under" } : {}}
                     onClick={scrollToRef}>About</button>
-            <button className="section" style={section === "skills" ? { textDecorationLine: 'underline' } : {}}
+            <button className="section" style={section === "skills" ? { textDecorationLine: 'underline', textUnderlinePosition: "under" } : {}}
                     onClick={scrollToRef}>Skills</button>
             <Dropdown header={"Projects"} list={list} section={section} />
-            <button className="section" style={section === "contact" ? { textDecorationLine: 'underline' } : {}}
+            <button className="section" style={section === "contact" ? { textDecorationLine: 'underline', textUnderlinePosition: "under" } : {}}
                     onClick={scrollToRef}>Contact</button>
           </div>
         </div>

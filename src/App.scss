@@ -398,7 +398,7 @@ form {
   }
 }
 
-input {
+input, .input {
   width: -webkit-fill-available;
   border: none;
   font-family: $inter;
@@ -411,11 +411,16 @@ input {
   margin-bottom: 40px;
 }
 
+//input-area {
+//
+//}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 1000px rgba(216, 216, 216, 0.13) inset;
   background-color: rgba(216, 216, 216, 0.13);
+  -webkit-text-fill-color: #C6C6C6;
   transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -554,7 +559,7 @@ input:-webkit-autofill:focus {
     letter-spacing: 18px;
   }
 
-  input {
+  input, .input {
     width: -webkit-fill-available;
     margin-bottom: 24px
   }
