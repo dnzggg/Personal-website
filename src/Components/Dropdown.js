@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import "./Dropdown.scss"
 import scrollToRef from "../function/scrollToRef";
 import {ReactComponent as Arrow} from "../images/arrow.svg";
@@ -28,10 +28,17 @@ const Dropdown = (props) => {
         setPos([x, y, rect.width])
     }
 
-    useEffect(()=> {
+    const handleOnScroll = useCallback(() => {
+        if (scrollTop > window.scrollY) {
+            setIsOpen(false)
+        }
+        setScrollTop(window.scrollY)
+    }, [scrollTop])
+
+    useEffect(() => {
         window.addEventListener("scroll", () => handleOnScroll());
         window.addEventListener("resize", () => handlePos())
-    }, [scrollTop])
+    }, [scrollTop, handleOnScroll])
 
     const toggling = (e) => {
         if (e.type === "mousemove") {
@@ -40,13 +47,6 @@ const Dropdown = (props) => {
             setIsOpen(false)
         }
         handlePos()
-    }
-
-    const handleOnScroll = () => {
-        if (scrollTop > window.scrollY) {
-            setIsOpen(false)
-        }
-        setScrollTop(window.scrollY)
     }
 
     return (

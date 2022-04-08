@@ -40,8 +40,8 @@ const Home = () => {
 
     <section id={"about"} className="hero">
       <div className="hero-content">
-        <h1>&#60;Hello, my name is Deniz GORUR.  I’m a future Software Engineer./&gt;</h1>
-        <p>BSc Computer Science student, determined, self-disciplined, self-starter, team player, eager to research further into studies, enthusiastic about Artificial Intelligence especially Intelligent Agents and Multi-agent Systems with a future plan of Master’s and PhD degree and an academic career on this topic
+        <h1>&#60;Hello, my name is Deniz GORUR.  I’m a future PhD candidate./&gt;</h1>
+        <p>MSc Artificial Intelligence student, determined, self-disciplined, self-starter, team player, eager to research further into studies, enthusiastic about Artificial Intelligence especially Intelligent Agents and Multi-agent Systems with a future plan of a PhD degree and an academic career on this topic
         </p>
       </div>
     </section>

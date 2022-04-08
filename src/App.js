@@ -9,16 +9,16 @@ import SocialMedia from "./Components/SocialMedia";
 
 const App = () => {
     return (
-      <div>
-          <Router history={history}>
-               <NavBar />
-              <Route exact path="/">
-                  <Home />
-              </Route>
-              <SocialMedia />
-          </Router>
-      </div>
+        <div>
+            <Router history={history}>
+                <NavBar />
+                <Route exact path="/">
+                    <Home />
+                </Route>
+                <SocialMedia />
+            </Router>
+        </div>
     )
-    }
+}
 
 export default App;

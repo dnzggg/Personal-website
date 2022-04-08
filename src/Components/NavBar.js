@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import history from "../utils/history"
 import "./NavBar.scss"
 import Dropdown from "./Dropdown";
@@ -15,17 +15,7 @@ const NavBar = () => {
   const [mobileHide, setMobileHide] = useState("hide");
   const [section, setSection] = useState("about")
 
-  useEffect(() => {
-    // subscribe event
-    window.addEventListener("scroll", handleOnScroll);
-    window.addEventListener("resize", () => {if (window.innerWidth > 1100) {setMobileHide("hide");document.body.classList.remove("mobile-menu-open")}})
-    return () => {
-      // unsubscribe event
-      window.removeEventListener("scroll", handleOnScroll);
-    };
-  }, [scrollTop]);
-
-  const handleOnScroll = () => {
+  const handleOnScroll = useCallback(() => {
     if (scrollTop < window.scrollY) {
       setHide("hide")
     } else if (scrollTop > window.scrollY) {
@@ -45,7 +35,17 @@ const NavBar = () => {
       setSection("skills")
     }
     setScrollTop(window.scrollY);
-  };
+  }, [scrollTop]);
+
+  useEffect(() => {
+    // subscribe event
+    window.addEventListener("scroll", handleOnScroll);
+    window.addEventListener("resize", () => {if (window.innerWidth > 1100) {setMobileHide("hide");document.body.classList.remove("mobile-menu-open")}})
+    return () => {
+      // unsubscribe event
+      window.removeEventListener("scroll", handleOnScroll);
+    };
+  }, [scrollTop, handleOnScroll]);
 
   const handleOpen = () => {
     if (mobileHide === "hide") {
