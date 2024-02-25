@@ -4,13 +4,13 @@ import scrollToRef from "../function/scrollToRef";
 import {ReactComponent as Arrow} from "../images/arrow.svg";
 
 const MapButtons = (props) => {
-    return props.list.map((item) => {
-            return(
-                <div>
-                    <button className="dropdown-item" onClick={scrollToRef}>{item}</button>
-                    <hr />
-                </div>
-            )
+    return props.list.map((item, index) => {
+        return(
+            <div key={index}>
+                <button className="dropdown-item" onClick={scrollToRef}>{item}</button>
+                <hr/>
+            </div>
+        )
         }
     )
 }

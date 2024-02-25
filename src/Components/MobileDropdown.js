@@ -3,9 +3,9 @@ import "./Dropdown.scss"
 import {ReactComponent as Arrow} from "../images/arrow.svg";
 
 const MapButtons = (props) => {
-    return props.list.map((item) => {
+    return props.list.map((item, index) => {
             return(
-                <div>
+                <div key={index}>
                     <button className="dropdown-item" onClick={props.handleClick}>{item}</button>
                     <hr />
                 </div>

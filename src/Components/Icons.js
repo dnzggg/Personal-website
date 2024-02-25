@@ -33,21 +33,21 @@ const Icons = () => {
   return (
     <div className="icon-items">
       <Python name={"Python"} onMouseEnter={handleHover} onMouseLeave={handleHover} className="icon" />
-        <text className={hover==="Python"?"true":"false"} style={{top: mouse.y, left: mouse.x}}>Python</text>
+        <p className={hover==="Python"?"true":"false"} style={{top: mouse.y, left: mouse.x}}>Python</p>
       <Java name={"Java"} onMouseEnter={handleHover} onMouseLeave={handleHover} className="icon" />
-        <text className={hover==="Java"?"true":"false"} style={{top: mouse.y, left: mouse.x}}>Java</text>
+        <p className={hover==="Java"?"true":"false"} style={{top: mouse.y, left: mouse.x}}>Java</p>
       <HTML name={"HTML"} onMouseEnter={handleHover} onMouseLeave={handleHover} className="icon"/>
-        <text className={hover==="HTML"?"true":"false"} style={{top: mouse.y, left: mouse.x}}>HTML</text>
+        <p className={hover==="HTML"?"true":"false"} style={{top: mouse.y, left: mouse.x}}>HTML</p>
       <JavaS name={"JavaS"} onMouseEnter={handleHover} onMouseLeave={handleHover} className="icon"/>
-        <text className={hover==="JavaS"?"true":"false"} style={{top: mouse.y, left: mouse.x}}>JavaScript</text>
+        <p className={hover==="JavaS"?"true":"false"} style={{top: mouse.y, left: mouse.x}}>JavaScript</p>
       <Postgres name={"Postgres"} onMouseEnter={handleHover} onMouseLeave={handleHover} className="icon"/>
-        <text className={hover==="Postgres"?"true":"false"} style={{top: mouse.y, left: mouse.x}}>SQL</text>
+        <p className={hover==="Postgres"?"true":"false"} style={{top: mouse.y, left: mouse.x}}>SQL</p>
       <C name={"C"} onMouseEnter={handleHover} onMouseLeave={handleHover} className="icon" />
-        <text className={hover==="C"?"true":"false"} style={{top: mouse.y, left: mouse.x}}>C</text>
+        <p className={hover==="C"?"true":"false"} style={{top: mouse.y, left: mouse.x}}>C</p>
       <Latex name={"Latex"} onMouseEnter={handleHover} onMouseLeave={handleHover} className="icon" />
-        <text className={hover==="Latex"?"true":"false"} style={{top: mouse.y, left: mouse.x}}>Latex</text>
+        <p className={hover==="Latex"?"true":"false"} style={{top: mouse.y, left: mouse.x}}>Latex</p>
       <Prolog name={"Prolog"} onMouseEnter={handleHover} onMouseLeave={handleHover} className="icon" />
-        <text className={hover==="Prolog"?"true":"false"} style={{top: mouse.y, left: mouse.x}}>Prolog</text>
+        <p className={hover==="Prolog"?"true":"false"} style={{top: mouse.y, left: mouse.x}}>Prolog</p>
     </div>
   )
 }

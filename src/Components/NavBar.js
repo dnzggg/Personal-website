@@ -64,8 +64,8 @@ const NavBar = () => {
     scrollToRef(e)
   }
 
-  let list = ["Cooperative Strategies in Multi-agent Systems", "Restaurant App", "Calculator",
-    "Tower Defence", "Self Pong Playing Robot", "Snake", "Minesweeper", "Tic Tac Toe"];
+  let list = ["Formalisation and Verification of Autonomous Vehicles in Simulators",
+    "Cooperative Strategies in Multi-agent Systems", "Restaurant App", "Calculator", "Self Pong Playing Robot"];
 
   return (
     <div>
@@ -75,6 +75,8 @@ const NavBar = () => {
           <div className="nav-desktop-links">
             <button className="section" style={section === "about" ? { textDecorationLine: 'underline', textUnderlinePosition: "under" } : {}}
                     onClick={scrollToRef}>About</button>
+            <button className="section" style={section === "publications" ? { textDecorationLine: 'underline', textUnderlinePosition: "under" } : {}}
+                    onClick={scrollToRef}>Publications</button>
             <button className="section" style={section === "skills" ? { textDecorationLine: 'underline', textUnderlinePosition: "under" } : {}}
                     onClick={scrollToRef}>Skills</button>
             <Dropdown header={"Projects"} list={list} section={section} />
@@ -109,6 +111,7 @@ const NavBar = () => {
 
           <div className={"menu-wrapper"}>
             <button className="section" onClick={handleClick}>About</button>
+            <button className="section" onClick={handleClick}>Publications</button>
             <button className="section" onClick={handleClick}>Skills</button>
             <MobileDropdown header={"Projects"} list={list} handleClick={handleClick} hide={mobileHide} />
             <button className="section" onClick={handleClick}>Contact</button>
